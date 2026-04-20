@@ -2,100 +2,135 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>디자인 소개 - 핑크 에디션</title>
+    <title>디자인 소개</title>
     <style>
-        :root {
-            --main-pink: #ff85a2;
-            --soft-pink: #ffd6e0;
-            --deep-pink: #ff6b9a;
-            --bg-pink: #fff0f3;
-            --text-brown: #5d4046;
-        }
-
+        /* 깔끔하고 세련된 핑크 포인트 디자인 */
         body {
-            background-color: var(--bg-pink);
-            font-family: 'Pretendard', Verdana, sans-serif;
-            color: var(--text-brown);
+            background-color: #fff0f3;
+            font-family: 'Malgun Gothic', sans-serif;
+            color: #444;
             margin: 0;
             padding: 40px 20px;
-            line-height: 1.6;
         }
 
-        /* 중앙 정렬 컨테이너 */
-        .wrapper {
-            max-width: 800px;
+        .container {
+            max-width: 700px;
             margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         h1 {
-            color: var(--deep-pink);
+            color: #ff6b9a;
             text-align: center;
-            font-size: 2.5rem;
+            border-bottom: 2px solid #ffdae0;
+            padding-bottom: 20px;
             margin-bottom: 30px;
-            text-shadow: 2px 2px 0px white;
         }
 
-        /* 카드 스타일 */
-        .card {
-            background-color: white;
-            border-radius: 30px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 20px rgba(255, 107, 154, 0.1);
-            border: 2px solid white;
-        }
-
-        h2 {
-            color: var(--deep-pink);
-            border-bottom: 3px dotted var(--soft-pink);
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            color: var(--main-pink);
-            margin-bottom: 15px;
-        }
+        h2, h3 { color: #ff85a2; margin-top: 30px; }
 
         /* 이미지 스타일 */
-        .design-img {
-            width: 250px;
-            height: 250px;
+        .profile-img {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             display: block;
-            margin: 30px auto;
-            border: 8px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 20px auto;
             object-fit: cover;
+            border: 5px solid #fff0f3;
         }
 
-        /* 리스트 스타일 */
-        ul { list-style: none; padding: 0; }
-        ul li {
-            background: var(--bg-pink);
-            margin: 10px 0;
-            padding: 10px 20px;
-            border-radius: 15px;
-            font-weight: bold;
-            color: var(--deep-pink);
-        }
-
-        /* 설명 리스트(dl) 스타일 */
-        dt { font-weight: bold; color: var(--deep-pink); margin-top: 15px; }
-        dd { margin-left: 0; margin-bottom: 10px; font-size: 0.95rem; }
-
-        /* 테이블 스타일 */
+        /* 표 스타일 */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
+            margin: 20px 0;
         }
 
-        th { background-color: var(--main-pink); color: white; padding: 12px; }
-        td { padding: 12px; border-bottom: 1px solid var(--soft-pink); text-align: center; }
+        th { background: #ff85a2; color: white; padding: 10px; }
+        td { border-bottom: 1px solid #eee; padding: 10px; text-align: center; }
 
-        .highlight { color: var(--deep-pink); font
+        /* 리스트 스타일 */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
+        .highlight { color: #ff6b9a; font-weight: bold; }
+
+        address {
+            margin-top: 40px;
+            font-style: normal;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>디자인 소개</h1>
+
+    <div class="section">
+        <h2>디자인의 의미</h2>
+        <p>디자인은 단순한 시각적 표현을 넘어서, 사람들에게 감정과 경험을 전달하는 과정이라고 생각합니다. 보는 사람에게 몰입감을 주는 디자인을 만드는 것이 목표입니다.</p>
+    </div>
+
+    <img src="IMG_9267.jpeg" alt="디자인 작업물" class="profile-img">
+
+    <div class="section">
+        <h3>■ 디자인 요소</h3>
+        <ul>
+            <li>전달력</li>
+            <li>가독성</li>
+            <li>스토리텔링</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>■ 디자인의 종류</h3>
+        <p><strong>3D 디자인:</strong> Blender를 활용한 캐릭터 제작</p>
+        <p><strong>VFX 디자인:</strong> Unreal Engine을 이용한 스킬 이펙트 제작</p>
+        <p><strong>그래픽 디자인:</strong> Unity를 활용한 월드 및 캐릭터 창조</p>
+    </div>
+
+    <div class="section">
+        <h2>디자인의 역할</h2>
+        <ol>
+            <li>정보를 효과적으로 전달</li>
+            <li>사용자의 경험 향상</li>
+            <li>시각적 흥미 유도</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>주요 키워드</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>키워드</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>창의성</td><td>-</td></tr>
+                <tr><td>2</td><td>전달력</td><td>-</td></tr>
+                <tr><td>3</td><td>몰입감</td><td>-</td></tr>
+                <tr><td>4</td><td>조화</td><td>상호작용</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <address>
+        출처: 한국디자인진흥원 (https://kidp.or.kr) <br>
+        문의: 031-780-2114
+    </address>
+</div>
+
+</body>
+</html>
