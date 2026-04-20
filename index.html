@@ -1,212 +1,192 @@
 <!DOCTYPE html>
-
 <html lang="ko">
-
 <head>
-
 <meta charset="UTF-8">
-
-<div class="card">
-
 <title>디자인 소개</title>
-
-</div>
-
 <style>
+    /* 1. 전체 배경과 폰트 업그레이드 */
+    body {
+        background-color: #ffd6e0;
+        font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+        color: #444;
+        margin: 0;
+        padding-bottom: 50px;
+    }
 
-body{background-color: #ffd6e0;
+    /* 2. 카드 스타일 세련되게 다듬기 */
+    .card {
+        background-color: white;
+        border-radius: 25px; /* 조금 더 둥글게 */
+        padding: 30px;
+        margin: 30px auto;
+        width: 85%;
+        max-width: 500px; /* 가독성 좋게 폭 조절 */
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(255, 118, 164, 0.2); /* 은은한 핑크 그림자 */
+        transition: transform 0.3s ease; /* 마우스 올리면 움직이는 효과 */
+    }
 
-font-family: Verdana, Geneva, Tahoma, sans-serif;}
+    .card:hover {
+        transform: translateY(-5px); /* 전문가스러운 호버 효과 */
+    }
 
+    h1 {
+        color: #ff76a4;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-top: 50px;
+        text-shadow: 2px 2px 0 white;
+    }
 
-.card{background-color: white;
+    h2 {
+        color: #ff6b9a;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
 
-border-radius: 20px;
+    h3 {
+        color: #ff6b9a;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ffd6e0;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
 
-padding: 30px;
+    /* 3. 이미지와 텍스트 꾸미기 */
+    .pink { color: #ff6b9a; font-weight: bold; }
 
-margin: 20px auto;
+    img {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        display: block;
+        margin: 30px auto;
+        border: 8px solid white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        object-fit: cover;
+    }
 
-width: 80%;
+    /* 4. 리스트와 테이블 깔끔하게 */
+    ul, ol {
+        text-align: left;
+        display: inline-block;
+        color: #666;
+    }
 
-max-width: 400px;
+    li { margin-bottom: 10px; }
 
-text-align: center;}
+    table {
+        margin: 30px auto;
+        border-collapse: collapse;
+        width: 90%;
+        max-width: 500px;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+    }
 
+    th {
+        background-color: #ff6b9a;
+        color: white;
+        padding: 12px;
+    }
 
-h1{color: #ff76a4e9;
+    td {
+        padding: 10px;
+        border-bottom: 1px solid #ffd6e0;
+        text-align: center;
+    }
 
-text-align: center;}
+    /* 푸터 스타일링 */
+    address {
+        font-style: normal;
+        font-size: 0.9rem;
+        color: #888;
+        line-height: 1.8;
+    }
 
-
-h2{color: #ff6b9a;
-
-text-align: center;
-
-margin-top: 40px;}
-
-
-
-.pink{color: #ffd7e4e9;
-
-font-weight: bold;}
-
-
-
-img{width: 200px;
-
-border-radius: 50%;
-
-display: block;
-
-margin: 20px auto;}
-
-
-
-table {margin: 20px auto;
-
-border-collapse: collapse;}
-
-
-
-th{background-color: #ff6b9a;
-
-color: white;
-
-padding: 10px;}
-
-
-
-td{padding: 8px;
-
-border-bottom: 1px solid #ddd;}
-
-
+    a { color: #ff6b9a; text-decoration: none; font-weight: bold; }
+    a:hover { text-decoration: underline; }
 
 </style>
-
 </head>
-
 <body>
 
 <h1> 디자인에 대하여 </h1>
 
 <div class="card">
+    <h2>디자인의 의미</h2>
+    <p>디자인은 단순한 시각적 표현을 넘어서,<br>사람들에게 <span class="pink">감정과 경험</span>을 전달하는 과정입니다.</p>
+    <p>저는 보는 사람에게 몰입감을 주는 디자인을 만드는 것을 목표로 하고 있습니다.</p>
+</div>
 
-<h2>디자인의 의미</h2>
+<img src="IMG_9267.jpeg" alt="나의 디자인">
 
-<p>디자인은 단순한 시각적 표현을 넘어서, 사람들에게 감정과 경험을 전달하는 과정이라고 생각합니다.<br>
-
-저는 보는 사람에게 몰입감을 주는 디자인을 만드는 것을 목표로 하고 있습니다.</p>
-
-<h2><h2> </div>
-
-<img src="IMG_9267.jpeg/IMG_9267.jpeg" alt=img_9267.jpeg">
-
-<p>제가 생각하는 디자인에 대하여 설명 하겠습니다.</p>
+<p style="text-align: center; color: #555;">제가 생각하는 디자인에 대하여 설명하겠습니다.</p>
 
 <div class="card">
-
-<h3>■ 디자인 요소</h3>
-
-<ul>
-
-<li>·전달력</li>
-
-<li>·가독성</li>
-
-<li>·스토리텔링</li>
-
-</div></ul>
+    <h3>■ 디자인 요소</h3>
+    <ul>
+        <li>전달력</li>
+        <li>가독성</li>
+        <li>스토리텔링</li>
+    </ul>
+</div>
 
 <div class="card">
-
-<h3>■ 디자인의 여러가지 종류</h3>
-
-<dl></div>
-
-<dt>3D디자인:</dt><dd>몰입감을 높혀줄 캐릭터를 Blender로 제작합니다.</dd>
-
-<dt>VFX디자인:</dt> <dd>Unreal로 물,불,바람효과등 스킬 이펙트를 넣어서 생동감 있게 만들어줍니다.</dd>
-
-<dt>그래픽디자인:</dt> <dd>Unity 그래픽사용하여 월드&캐릭터 등을 창조할 수 있습니다.</dd>
-
-<dl>
+    <h3>■ 디자인의 여러가지 종류</h3>
+    <div style="text-align: left;">
+        <p><strong>3D디자인:</strong> Blender로 캐릭터 제작</p>
+        <p><strong>VFX디자인:</strong> Unreal로 생동감 넘치는 이펙트 제작</p>
+        <p><strong>그래픽디자인:</strong> Unity로 월드와 캐릭터 창조</p>
+    </div>
+</div>
 
 <div class="card">
-
-<h3>■ 디자인의 역할</h3>
-
-<ol><li><a href=#>1.정보를 효과적으로 전달</a></li>
-
-<li><a href=#>2.사용자의 경험 향상</a></li>
-
-<li><a href=#>3.시각적 흥미 유도</a></li></ol></div>
-
-<div class="card">
-
-<h2>3D 및 VFX 디자인</h2>
-
-<p>3D그래픽과 VFX는 현실감과 몰입감을 높이는데 중요한 역할을 합니다.<br>
-
-특히 게임과 영상 콘텐츠에서 시각적 완성도를 높이는 핵심 요소입니다.</p></div>
+    <h3>■ 디자인의 역할</h3>
+    <ol>
+        <li><a href="#">정보를 효과적으로 전달</a></li>
+        <li><a href="#">사용자의 경험 향상</a></li>
+        <li><a href="#">시각적 흥미 유도</a></li>
+    </ol>
+</div>
 
 <div class="card">
+    <h2>3D 및 VFX 디자인</h2>
+    <p>현실감과 몰입감을 높여 게임과 영상 콘텐츠의 시각적 완성도를 높이는 핵심 요소입니다.</p>
+</div>
 
-<h2>디자인의 중요성</h2>
+<div class="card">
+    <h2>디자인의 중요성</h2>
+    <p>현대 사회에서 브랜드 이미지 형성과 사용자 경험에 큰 영향을 미치므로 <span class="pink">기능성과 심미성</span>을 동시에 고려해야 합니다.</p>
+</div>
 
-<p>
-
-현대 사회에서 디자인은 브랜드 이미지 형성과 사용자 경험에 큰 영향을 미칩니다.<br>
-
-따라서 가능성과 심미성을 동시에 고려한 디자인을 제작해야합니다.</p></div>
-
-<table><thead>
-
-<tr><th>디자인</th> <th>에 대한</th> <th class="pink">키워드</th></tr>
-
-</thead>
-
-<tbody>
-
-<tr><td>1</td> <td>창의성</td><td></td></tr>
-
-<tr><td>2</td> <td>전달력</td><td></td></tr>
-
-<tr><td>3</td> <td>몰입감</td><td></td></tr>
-
-<tr><td>4</td> <td>균형</td><td></td></tr>
-
-<tr><td>5</td> <td>조화</td> <td>균형&조화는 상효작용합니다.</td></tr>
-
-<tr><td>6</td> <td>색상</td><td></td></tr>
-
-</tbody>
-
+<table>
+    <thead>
+        <tr><th>번호</th> <th>키워드</th> <th class="pink">비고</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td> <td>창의성</td><td>-</td></tr>
+        <tr><td>2</td> <td>전달력</td><td>-</td></tr>
+        <tr><td>3</td> <td>몰입감</td><td>-</td></tr>
+        <tr><td>4</td> <td>균형</td><td>-</td></tr>
+        <tr><td>5</td> <td>조화</td> <td>상호작용</td></tr>
+        <tr><td>6</td> <td>색상</td><td>-</td></tr>
+    </tbody>
 </table>
 
 <div class="card">
-
-<h2>디자인의 미래</h2>
-
-<p>
-
-현재 디자인은 디지털 기술과 결합하여 끊임없이 확장하고 있습니다. <em>특히 인터렉티브 콘텐츠와 3D그래픽은 새로운 시각적 경험을 만들어내고 있습니다.</em><br>
-
-이러한 변화 속에서 디자인은 단순한 시각적 요소를 넘어 사용자 경험을 중심으로 발전할 것으로 예상됩니다.</p></div>
-
-<address> <p><thead></thead>https://kidp.or.kr/?menuno=773</address></p>
-
-<p><a href=tel:031-780-2114></a></p>
-
-<a href="target=_blank"></a></p>
-
+    <h2>디자인의 미래</h2>
+    <p>디지털 기술과 결합하여 끊임없이 확장하고 있으며, 특히 <em>인터렉티브 콘텐츠</em>는 새로운 시각적 경험을 만들어내고 있습니다.</p>
 </div>
 
-</address>
-
-</dl>
+<div class="card">
+    <address> 
+        출처: <a href="https://kidp.or.kr/?menuno=773" target="_blank">한국디자인진흥원</a><br>
+        문의: <a href="tel:031-780-2114">031-780-2114</a>
+    </address>
+</div>
 
 </body>
-
 </html>
