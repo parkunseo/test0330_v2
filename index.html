@@ -4,189 +4,41 @@
 <meta charset="UTF-8">
 <title>디자인 소개</title>
 <style>
-    /* 1. 전체 배경과 폰트 업그레이드 */
+    /* 1. 디자인 시스템 변수 설정 (전문가용 핑크 테마) */
+    :root {
+        --main-pink: #ff85a2;      /* 생기 있는 메인 핑크 */
+        --deep-pink: #f15c7d;      /* 강조용 진분홍 */
+        --light-pink: #fff0f3;     /* 아주 연한 배경 핑크 */
+        --point-pink: #ffdae0;     /* 서브 핑크 */
+        --text-brown: #5d4046;     /* 가독성 좋은 딥 로즈 브라운 */
+        --glass-white: rgba(255, 255, 255, 0.9);
+        --shadow-pink: rgba(255, 133, 162, 0.3);
+        --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* 전체 레이아웃 리셋 및 부드러운 배경 */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     body {
         background-color: #ffd6e0;
-        font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
-        color: #444;
-        margin: 0;
-        padding-bottom: 50px;
-    }
-
-    /* 2. 카드 스타일 세련되게 다듬기 */
-    .card {
-        background-color: white;
-        border-radius: 25px; /* 조금 더 둥글게 */
-        padding: 30px;
-        margin: 30px auto;
-        width: 85%;
-        max-width: 500px; /* 가독성 좋게 폭 조절 */
-        text-align: center;
-        box-shadow: 0 10px 20px rgba(255, 118, 164, 0.2); /* 은은한 핑크 그림자 */
-        transition: transform 0.3s ease; /* 마우스 올리면 움직이는 효과 */
-    }
-
-    .card:hover {
-        transform: translateY(-5px); /* 전문가스러운 호버 효과 */
-    }
-
-    h1 {
-        color: #ff76a4;
-        text-align: center;
-        font-size: 2.5rem;
-        margin-top: 50px;
-        text-shadow: 2px 2px 0 white;
-    }
-
-    h2 {
-        color: #ff6b9a;
-        text-align: center;
-        margin-top: 10px;
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        color: #ff6b9a;
-        margin-bottom: 15px;
-        border-bottom: 2px solid #ffd6e0;
-        display: inline-block;
-        padding-bottom: 5px;
-    }
-
-    /* 3. 이미지와 텍스트 꾸미기 */
-    .pink { color: #ff6b9a; font-weight: bold; }
-
-    img {
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-        display: block;
-        margin: 30px auto;
-        border: 8px solid white;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        object-fit: cover;
-    }
-
-    /* 4. 리스트와 테이블 깔끔하게 */
-    ul, ol {
-        text-align: left;
-        display: inline-block;
-        color: #666;
-    }
-
-    li { margin-bottom: 10px; }
-
-    table {
-        margin: 30px auto;
-        border-collapse: collapse;
-        width: 90%;
-        max-width: 500px;
-        background: white;
-        border-radius: 15px;
-        overflow: hidden;
-    }
-
-    th {
-        background-color: #ff6b9a;
-        color: white;
-        padding: 12px;
-    }
-
-    td {
-        padding: 10px;
-        border-bottom: 1px solid #ffd6e0;
-        text-align: center;
-    }
-
-    /* 푸터 스타일링 */
-    address {
-        font-style: normal;
-        font-size: 0.9rem;
-        color: #888;
+        background-image: linear-gradient(135deg, #ffeef2 0%, #ffd6e0 100%);
+        font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+        color: var(--text-brown);
         line-height: 1.8;
+        padding: 60px 20px;
     }
 
-    a { color: #ff6b9a; text-decoration: none; font-weight: bold; }
-    a:hover { text-decoration: underline; }
+    /* 중앙 정렬 컨테이너 */
+    .wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
-</style>
-</head>
-<body>
-
-<h1> 디자인에 대하여 </h1>
-
-<div class="card">
-    <h2>디자인의 의미</h2>
-    <p>디자인은 단순한 시각적 표현을 넘어서,<br>사람들에게 <span class="pink">감정과 경험</span>을 전달하는 과정입니다.</p>
-    <p>저는 보는 사람에게 몰입감을 주는 디자인을 만드는 것을 목표로 하고 있습니다.</p>
-</div>
-
-<img src="IMG_9267.jpeg" alt="나의 디자인">
-
-<p style="text-align: center; color: #555;">제가 생각하는 디자인에 대하여 설명하겠습니다.</p>
-
-<div class="card">
-    <h3>■ 디자인 요소</h3>
-    <ul>
-        <li>전달력</li>
-        <li>가독성</li>
-        <li>스토리텔링</li>
-    </ul>
-</div>
-
-<div class="card">
-    <h3>■ 디자인의 여러가지 종류</h3>
-    <div style="text-align: left;">
-        <p><strong>3D디자인:</strong> Blender로 캐릭터 제작</p>
-        <p><strong>VFX디자인:</strong> Unreal로 생동감 넘치는 이펙트 제작</p>
-        <p><strong>그래픽디자인:</strong> Unity로 월드와 캐릭터 창조</p>
-    </div>
-</div>
-
-<div class="card">
-    <h3>■ 디자인의 역할</h3>
-    <ol>
-        <li><a href="#">정보를 효과적으로 전달</a></li>
-        <li><a href="#">사용자의 경험 향상</a></li>
-        <li><a href="#">시각적 흥미 유도</a></li>
-    </ol>
-</div>
-
-<div class="card">
-    <h2>3D 및 VFX 디자인</h2>
-    <p>현실감과 몰입감을 높여 게임과 영상 콘텐츠의 시각적 완성도를 높이는 핵심 요소입니다.</p>
-</div>
-
-<div class="card">
-    <h2>디자인의 중요성</h2>
-    <p>현대 사회에서 브랜드 이미지 형성과 사용자 경험에 큰 영향을 미치므로 <span class="pink">기능성과 심미성</span>을 동시에 고려해야 합니다.</p>
-</div>
-
-<table>
-    <thead>
-        <tr><th>번호</th> <th>키워드</th> <th class="pink">비고</th></tr>
-    </thead>
-    <tbody>
-        <tr><td>1</td> <td>창의성</td><td>-</td></tr>
-        <tr><td>2</td> <td>전달력</td><td>-</td></tr>
-        <tr><td>3</td> <td>몰입감</td><td>-</td></tr>
-        <tr><td>4</td> <td>균형</td><td>-</td></tr>
-        <tr><td>5</td> <td>조화</td> <td>상호작용</td></tr>
-        <tr><td>6</td> <td>색상</td><td>-</td></tr>
-    </tbody>
-</table>
-
-<div class="card">
-    <h2>디자인의 미래</h2>
-    <p>디지털 기술과 결합하여 끊임없이 확장하고 있으며, 특히 <em>인터렉티브 콘텐츠</em>는 새로운 시각적 경험을 만들어내고 있습니다.</p>
-</div>
-
-<div class="card">
-    <address> 
-        출처: <a href="https://kidp.or.kr/?menuno=773" target="_blank">한국디자인진흥원</a><br>
-        문의: <a href="tel:031-780-2114">031-780-2114</a>
-    </address>
-</div>
-
-</body>
-</html>
+    /* 2. 제목 스타일링 (그라데이션 & 그림자) */
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 50px;
+        background: linear-gradient(45deg, var(--deep-pink), var(--main-pink));
+        -webkit-background-clip: text;
+        color: transparent;
