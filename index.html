@@ -2,134 +2,181 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>디자인 소개</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Pink Portfolio</title>
     <style>
-        /* 깔끔하고 세련된 핑크 포인트 디자인 */
+        /* 전문가 느낌의 핑크 톤온톤 변수 */
+        :root {
+            --bg-base: #fff0f3;        /* 아주 연한 핑크 배경 */
+            --main-pink: #ff85a2;      /* 생기 있는 핑크 */
+            --deep-pink: #f15c7d;      /* 강조용 진분홍 */
+            --point-pink: #ffb8c6;     /* 서브 핑크 */
+            --text-color: #5d4046;     /* 가독성 좋은 딥 로즈 브라운 */
+            --glass-white: rgba(255, 255, 255, 0.85);
+        }
+
+        /* 전체 리셋 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            background-color: #fff0f3;
-            font-family: 'Malgun Gothic', sans-serif;
-            color: #444;
-            margin: 0;
-            padding: 40px 20px;
+            background: var(--bg-base);
+            background-image: 
+                radial-gradient(at 0% 0%, #ffe3e9 0px, transparent 50%),
+                radial-gradient(at 100% 100%, #ffcbd5 0px, transparent 50%);
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 50px 20px;
         }
 
         .container {
-            max-width: 700px;
+            max-width: 1000px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
-        h1 {
-            color: #ff6b9a;
+        header {
             text-align: center;
-            border-bottom: 2px solid #ffdae0;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 60px;
         }
 
-        h2, h3 { color: #ff85a2; margin-top: 30px; }
-
-        /* 이미지 스타일 */
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            display: block;
-            margin: 20px auto;
-            object-fit: cover;
-            border: 5px solid #fff0f3;
+        header h1 {
+            font-size: 3.5rem;
+            color: var(--deep-pink);
+            letter-spacing: -2px;
+            text-shadow: 4px 4px 0px #ffffff;
         }
 
-        /* 표 스타일 */
-        table {
+        /* 메인 박스 (글래스모피즘) */
+        main {
+            background: var(--glass-white);
+            backdrop-filter: blur(15px);
+            border-radius: 40px;
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(255, 133, 162, 0.15);
+            border: 2px solid #ffffff;
+        }
+
+        section { margin-bottom: 50px; }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--deep-pink);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '🌸';
+            font-size: 1.2rem;
+        }
+
+        /* 핑크 태그 스타일 */
+        .skill-group { display: flex; gap: 12px; flex-wrap: wrap; }
+        
+        .skill-tag {
+            background: white;
+            color: var(--main-pink);
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            border: 2px solid var(--main-pink);
+            transition: 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: var(--main-pink);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* 핑크 테이블 스타일 */
+        .pink-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin-top: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--main-pink);
         }
 
-        th { background: #ff85a2; color: white; padding: 10px; }
-        td { border-bottom: 1px solid #eee; padding: 10px; text-align: center; }
+        .pink-table th {
+            background: var(--main-pink);
+            color: white;
+            padding: 15px;
+        }
 
-        /* 리스트 스타일 */
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-
-        .highlight { color: #ff6b9a; font-weight: bold; }
-
-        address {
-            margin-top: 40px;
-            font-style: normal;
-            font-size: 0.8rem;
+        .pink-table td {
+            background: white;
+            padding: 12px;
             text-align: center;
-            color: #999;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
+            border-bottom: 1px solid var(--point-pink);
         }
+
+        /* 푸터 주소 */
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--deep-pink);
+            opacity: 0.8;
+        }
+
+        footer a { color: var(--deep-pink); font-weight: bold; }
+
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>디자인 소개</h1>
+    <header>
+        <h1>DESIGN LAB</h1>
+    </header>
 
-    <div class="section">
-        <h2>디자인의 의미</h2>
-        <p>디자인은 단순한 시각적 표현을 넘어서, 사람들에게 감정과 경험을 전달하는 과정이라고 생각합니다. 보는 사람에게 몰입감을 주는 디자인을 만드는 것이 목표입니다.</p>
-    </div>
+    <main>
+        <section>
+            <h2>Design Meaning</h2>
+            <p>디자인은 <strong>사람의 마음을 움직이는 시각적 언어</strong>입니다. 3D 그래픽과 생동감 넘치는 VFX를 통해 누구나 꿈꾸는 공간을 현실로 구현합니다.</p>
+        </section>
 
-    <img src="IMG_9267.jpeg" alt="디자인 작업물" class="profile-img">
+        <section>
+            <h2>My Core Values</h2>
+            <div class="skill-group">
+                <span class="skill-tag">전달력</span>
+                <span class="skill-tag">가독성</span>
+                <span class="skill-tag">스토리텔링</span>
+                <span class="skill-tag">몰입감</span>
+            </div>
+        </section>
 
-    <div class="section">
-        <h3>■ 디자인 요소</h3>
-        <ul>
-            <li>전달력</li>
-            <li>가독성</li>
-            <li>스토리텔링</li>
-        </ul>
-    </div>
+        <section>
+            <h2>Keyword Chart</h2>
+            <table class="pink-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Keyword</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>01</td><td>Creativity</td><td>무한한 상상력</td></tr>
+                    <tr><td>02</td><td>Harmony</td><td>완벽한 색상 조화</td></tr>
+                    <tr><td>03</td><td>Future</td><td>차세대 시각 경험</td></tr>
+                </tbody>
+            </table>
+        </section>
 
-    <div class="section">
-        <h3>■ 디자인의 종류</h3>
-        <p><strong>3D 디자인:</strong> Blender를 활용한 캐릭터 제작</p>
-        <p><strong>VFX 디자인:</strong> Unreal Engine을 이용한 스킬 이펙트 제작</p>
-        <p><strong>그래픽 디자인:</strong> Unity를 활용한 월드 및 캐릭터 창조</p>
-    </div>
+        <section style="background: #fff5f7; padding: 25px; border-radius: 20px; border-left: 10px solid var(--deep-pink);">
+            <h3 style="color: var(--deep-pink); margin-bottom: 10px;">Future Vision</h3>
+            <p>현재의 디자인은 디지털 기술과 만나 새로운 차원으로 확장되고 있습니다. 저의 디자인은 사용자에게 단순한 이미지가 아닌 '경험'을 선물할 것입니다.</p>
+        </section>
+    </main>
 
-    <div class="section">
-        <h2>디자인의 역할</h2>
-        <ol>
-            <li>정보를 효과적으로 전달</li>
-            <li>사용자의 경험 향상</li>
-            <li>시각적 흥미 유도</li>
-        </ol>
-    </div>
-
-    <div class="section">
-        <h2>주요 키워드</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>번호</th>
-                    <th>키워드</th>
-                    <th>비고</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>1</td><td>창의성</td><td>-</td></tr>
-                <tr><td>2</td><td>전달력</td><td>-</td></tr>
-                <tr><td>3</td><td>몰입감</td><td>-</td></tr>
-                <tr><td>4</td><td>조화</td><td>상호작용</td></tr>
-            </tbody>
-        </table>
-    </div>
-
-    <address>
-        출처: 한국디자인진흥원 (https://kidp.or.kr) <br>
-        문의: 031-780-2114
-    </address>
+    <footer>
+        <p>&copy; 2026 Pink Designer Portfolio | <a href="https://kidp.or.kr">Visit KIDP</a></p>
+    </footer>
 </div>
 
 </body>
