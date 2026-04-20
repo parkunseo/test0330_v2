@@ -3,94 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pink Design Archive</title>
+    <title>Premium Pink Portfolio</title>
     <style>
-        /* 1. 핑크 그라데이션 디자인 시스템 */
+        /* 전문가 느낌의 핑크 톤온톤 변수 */
         :root {
-            --main-pink: #ff85a2;      /* 메인 진분홍 */
-            --light-pink: #ffdae0;     /* 배경 연분홍 */
-            --deep-pink: #f15c7d;      /* 강조 핫핑크 */
-            --soft-white: #fff9fa;     /* 핑크빛 도는 흰색 */
-            --shadow-pink: rgba(255, 133, 162, 0.2);
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --bg-base: #fff0f3;        /* 아주 연한 핑크 배경 */
+            --main-pink: #ff85a2;      /* 생기 있는 핑크 */
+            --deep-pink: #f15c7d;      /* 강조용 진분홍 */
+            --point-pink: #ffb8c6;     /* 서브 핑크 */
+            --text-color: #5d4046;     /* 가독성 좋은 딥 로즈 브라운 */
+            --glass-white: rgba(255, 255, 255, 0.85);
         }
 
+        /* 전체 리셋 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            background-color: var(--light-pink);
-            background-image: radial-gradient(circle at 20% 30%, #ffeef2 0%, var(--light-pink) 100%);
-            font-family: 'Pretendard', sans-serif;
-            color: #5d3f46; /* 진한 팥죽색 느낌의 핑크 브라운 (가독성용) */
-            padding: 40px 20px;
+            background: var(--bg-base);
+            background-image: 
+                radial-gradient(at 0% 0%, #ffe3e9 0px, transparent 50%),
+                radial-gradient(at 100% 100%, #ffcbd5 0px, transparent 50%);
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 50px 20px;
         }
 
-        .wrapper { max-width: 1100px; margin: 0 auto; }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
 
         header h1 {
-            text-align: center;
             font-size: 3.5rem;
             color: var(--deep-pink);
-            margin-bottom: 40px;
-            text-shadow: 3px 3px 0px white;
-            letter-spacing: 2px;
+            letter-spacing: -2px;
+            text-shadow: 4px 4px 0px #ffffff;
         }
 
-        /* 2. 메인 레이아웃 */
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 280px;
-            gap: 25px;
-        }
-
+        /* 메인 박스 (글래스모피즘) */
         main {
-            background: var(--soft-white);
+            background: var(--glass-white);
+            backdrop-filter: blur(15px);
             border-radius: 40px;
-            padding: 45px;
-            border: 2px solid white;
-            box-shadow: 15px 15px 30px var(--shadow-pink);
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(255, 133, 162, 0.15);
+            border: 2px solid #ffffff;
         }
 
-        /* 3. 섹션 및 카드 스타일 */
         section { margin-bottom: 50px; }
 
         h2 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             color: var(--deep-pink);
-            margin-bottom: 25px;
-            display: inline-block;
-            border-bottom: 4px dotted var(--main-pink);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .pink-card {
-            background: white;
-            border-radius: 25px;
-            padding: 25px;
-            border: 1px solid var(--light-pink);
-            transition: var(--transition);
+        h2::before {
+            content: '🌸';
+            font-size: 1.2rem;
         }
 
-        .pink-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 20px var(--shadow-pink);
-        }
-
-        /* 4. 버튼형 리스트 */
-        .tag-container { display: flex; gap: 10px; flex-wrap: wrap; }
+        /* 핑크 태그 스타일 */
+        .skill-group { display: flex; gap: 12px; flex-wrap: wrap; }
         
-        .tag {
-            background: var(--light-pink);
-            color: var(--deep-pink);
-            padding: 8px 20px;
+        .skill-tag {
+            background: white;
+            color: var(--main-pink);
+            padding: 8px 25px;
             border-radius: 50px;
-            font-weight: bold;
-            font-size: 14px;
+            font-weight: 700;
+            border: 2px solid var(--main-pink);
+            transition: 0.3s;
         }
 
-        /* 5. 핑크 테이블 (이게 포인트!) */
-        table {
+        .skill-tag:hover {
+            background: var(--main-pink);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* 핑크 테이블 스타일 */
+        .pink-table {
             width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
+            border-collapse: collapse;
             margin-top: 20px;
+            border-radius: 20px;
             overflow: hidden;
+            border: 2px solid var(--main-pink);
+        }
+
+        .pink-table th {
+            background: var(--main-pink);
+            color: white;
+            padding: 15px;
+        }
+
+        .pink-table td {
+            background: white;
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid var(--point-pink);
+        }
+
+        /* 푸터 주소 */
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--deep-pink);
+            opacity: 0.8;
+        }
+
+        footer a { color: var(--deep-pink); font-weight: bold; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>DESIGN LAB</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Design Meaning</h2>
+            <p>디자인은 <strong>사람의 마음을 움직이는 시각적 언어</strong>입니다. 3D 그래픽과 생동감 넘치는 VFX를 통해 누구나 꿈꾸는 공간을 현실로 구현합니다.</p>
+        </section>
+
+        <section>
+            <h2>My Core Values</h2>
+            <div class="skill-group">
+                <span class="skill-tag">전달력</span>
+                <span class="skill-tag">가독성</span>
+                <span class="skill-tag">스토리텔링</span>
+                <span class="skill-tag">몰입감</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Keyword Chart</h2>
+            <table class="pink-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Keyword</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>01</td><td>Creativity</td><td>무한한 상상력</td></tr>
+                    <tr><td>02</td><td>Harmony</td><td>완벽한 색상 조화</td></tr>
+                    <tr><td>03</td><td>Future</td><td>차세대 시
