@@ -2,76 +2,86 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>디자인 소개</title>
-
+<title>Design Portfolio</title>
 <style>
-body {
-    background: linear-gradient(135deg, #ffd6e0, #ffeaf1);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Pretendard', sans-serif;
+    background: linear-gradient(135deg, #ffd6e0, #fff0f5);
+    color: #333;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #ff9bb3, #ffc1d3);
+    text-align: center;
+    color: white;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+.container {
+    padding: 60px 20px;
 }
 .card {
-    background: white;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.6);
     border-radius: 20px;
     padding: 30px;
     margin: 30px auto;
-    width: 80%;
-    max-width: 420px;
-    text-align: center;
+    max-width: 500px;
     
-    
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    transform: translateY(40px);
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s ease forwards;
+    transition: 0.6s;
 }
-.card:nth-child(1) { animation-delay: 0.2s; }
-.card:nth-child(2) { animation-delay: 0.4s; }
-.card:nth-child(3) { animation-delay: 0.6s; }
-.card:nth-child(4) { animation-delay: 0.8s; }
+.card.show {
+    transform: translateY(0);
+    opacity: 1;
+}
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
-    transition: 0.3s;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-h1 {
-    color: #ff76a4;
-    text-align: center;
-    margin-top: 40px;
+    transform: scale(1.03);
 }
 h2 {
-    color: #ff6b9a;
-    margin-top: 20px;
+    color: #ff4f87;
+    margin-bottom: 15px;
 }
-img {
-    width: 200px;
+.profile-img {
+    width: 180px;
     border-radius: 50%;
     display: block;
-    margin: 20px auto;
+    margin: 30px auto;
     transition: 0.5s;
 }
-img:hover {
-    transform: scale(1.1) rotate(3deg);
+.profile-img:hover {
+    transform: scale(1.1);
 }
 ul {
     list-style: none;
-    padding: 0;
 }
-ul li::before {
-    content: "✔ ";
-    color: #ff6b9a;
+ul li {
+    margin: 8px 0;
 }
 table {
     margin: 20px auto;
     border-collapse: collapse;
 }
 th {
-    background-color: #ff6b9a;
+    background: #ff4f87;
     color: white;
     padding: 10px;
 }
@@ -79,32 +89,34 @@ td {
     padding: 8px;
     border-bottom: 1px solid #ddd;
 }
-a {
-    text-decoration: none;
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff4f87;
     color: white;
-    background: #ff6b9a;
-    padding: 8px 15px;
     border-radius: 20px;
+    text-decoration: none;
     transition: 0.3s;
 }
-
-a:hover {
-    background: #ff4f87;
+.btn:hover {
+    background: #ff2f6d;
 }
 </style>
 </head>
 <body>
-<h1>디자인에 대하여</h1>
+<section class="hero">
+    <h1>Design</h1>
+    <p>감정과 경험을 설계하는 디자인</p>
+</section>
+<div class="container">
+<img src="images/IMG_9267.jpeg" class="profile-img">
 <div class="card">
 <h2>디자인의 의미</h2>
-<p>
-디자인은 단순한 시각적 표현을 넘어 감정과 경험을 전달하는 과정입니다.<br>
-몰입감을 주는 디자인을 만드는 것을 목표로 합니다.
-</p>
+<p>디자인은 단순한 시각적 표현이 아닌 경험을 설계하는 과정입니다.</p>
 </div>
-<img src="IMG_9267.jpeg" alt="IMG_9267">
 <div class="card">
-<h3>■ 디자인 요소</h3>
+<h2>디자인 요소</h2>
 <ul>
 <li>전달력</li>
 <li>가독성</li>
@@ -112,30 +124,37 @@ a:hover {
 </ul>
 </div>
 <div class="card">
-<h3>■ 디자인의 종류</h3>
-<dl>
-<dt>3D 디자인</dt>
-<dd>Blender를 활용한 캐릭터 제작</dd>
-<dt>VFX 디자인</dt>
-<dd>Unreal로 이펙트 구현</dd>
-<dt>그래픽 디자인</dt>
-<dd>Unity 기반 월드 & 캐릭터 제작</dd>
-</dl>
+<h2>디자인 분야</h2>
+<p>3D / VFX / 그래픽 디자인을 기반으로 몰입감 있는 콘텐츠 제작</p>
 </div>
 <div class="card">
-<h3>■ 디자인의 역할</h3>
-<ol>
-<li><a href="#">정보 전달</a></li>
-<li><a href="#">사용자 경험 향상</a></li>
-<li><a href="#">시각적 흥미 유도</a></li>
-</ol>
+<h2>디자인 키워드</h2>
+<table>
+<tr><th>번호</th><th>키워드</th></tr>
+<tr><td>1</td><td>창의성</td></tr>
+<tr><td>2</td><td>몰입감</td></tr>
+<tr><td>3</td><td>조화</td></tr>
+</table>
 </div>
 <div class="card">
 <h2>디자인의 미래</h2>
-<p>
-디자인은 디지털 기술과 결합하여 계속 발전하고 있습니다.<br>
-특히 3D와 인터랙티브 콘텐츠가 핵심입니다.
-</p>
+<p>인터랙티브와 3D 기반 경험 중심 디자인으로 발전</p>
+<a href="#" class="btn">더 알아보기</a>
 </div>
+</div>
+<script>
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+
+        if(top < trigger){
+            card.classList.add('show');
+        }
+    });
+});
+</script>
 </body>
 </html>
